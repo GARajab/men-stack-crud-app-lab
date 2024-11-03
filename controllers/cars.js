@@ -33,7 +33,7 @@ const edit = async (req, res) => {
 };
 const update = async (req, res) => {
   const id = req.params.id;
-  await Car.findByIdAndUpdate(req.body);
+  await Car.findByIdAndUpdate(id, req.body);
   res.redirect(`/cars/${id}`);
 };
 module.exports = {

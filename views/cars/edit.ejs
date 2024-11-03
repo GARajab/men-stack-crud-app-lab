@@ -12,15 +12,15 @@
     <a href="/cars/">Back to Cars</a>
 
     <h1>Create a New Car!</h1>
-    <form action="/cars/<%= cars.id%>" method="POST">
+    <form action="/cars/<%= cars._id %>?_method=put" method="POST">
       <label for="name">Name:</label>
       <input type="text" name="name" id="name" value="<%= cars.name%>" />
       <label for="color">Color:</label>
-      <input type="text" name="color" id="color" value="<%= cars.name%>" />
+      <input type="text" name="color" id="color" value="<%= cars.color%>" />
       <label for="model">Model:</label>
-      <input type="text" name="model" id="model" value="<%= cars.name%>" />
+      <input type="text" name="model" id="model" value="<%= cars.model%>" />
 
-      <button type="submit">Add Car</button>
+      <button type="submit">Update The Car</button>
     </form>
   </body>
 </html>
